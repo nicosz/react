@@ -1,0 +1,30 @@
+.carrito {
+    height: 26px;
+    width: 26px;
+
+}
+
+.NumberForCart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    height: 18px;
+    width: 18px;
+    position: absolute;
+    margin: 12px;
+    font-size: 11px;
+}
+
+@media(max-width: 992px) {
+    .icono-de-carrito {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        
+    }
+}
