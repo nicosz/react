@@ -34,13 +34,11 @@ function HeaderNav({title}) {
               <Nav.Link href="#" disabled>
                 Link
               </Nav.Link>
-            </Nav>
+            </Nav>           
             <Cartwidget />
-
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <ItemListContainer />
     </div>
 
   );

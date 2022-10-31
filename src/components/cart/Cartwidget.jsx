@@ -9,7 +9,6 @@ function Cartwidget() {
                 <div>
                     <p className="NumberForCart ">1</p>
                 </div>
-                
                 <FontAwesomeIcon className='carrito' icon={faCartArrowDown} />
             </div>
         </div>

@@ -1,7 +1,6 @@
 .carrito {
     height: 26px;
     width: 26px;
-
 }
 
 .NumberForCart {
@@ -25,6 +24,5 @@
         justify-content: center;
         margin-bottom: 5px;
         margin-top: 5px;
-        
     }
 }
