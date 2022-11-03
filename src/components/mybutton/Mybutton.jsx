@@ -20,8 +20,8 @@ function Mybutton({ title, color, stock }) {
 
   return (
     <>
-      <button onClick={handleSuma} style={styleButton} className="button"> + </button>
       <button onClick={handleResta} style={styleButton} className="button"> - </button>
+      <button onClick={handleSuma} style={styleButton} className="button"> + </button>
       <p>{title}</p>
       <p>{count}</p>
     </>

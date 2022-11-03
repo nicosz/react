@@ -3,6 +3,11 @@
     width: 26px;
 }
 
+.icon {
+    color: black;
+}
+
+
 .NumberForCart {
     display: flex;
     justify-content: center;
