@@ -1,13 +1,12 @@
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Cartwidget from '../cart/Cartwidget';
-import ItemListContainer  from '../Iteamlist/ItemListContainer';
 
-function HeaderNav({title}) {
+
+function HeaderNav({ title }) {
+
   return (
     <div>
       <Navbar bg="light" expand="lg">
@@ -34,13 +33,12 @@ function HeaderNav({title}) {
               <Nav.Link href="#" disabled>
                 Link
               </Nav.Link>
-            </Nav>           
+            </Nav>
             <Cartwidget />
           </Navbar.Collapse>
         </Container>
       </Navbar>
     </div>
-
   );
 
 }
