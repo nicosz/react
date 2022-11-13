@@ -1,4 +1,5 @@
 import "./itemdetail.css";
+import Mybutton from "../mybutton/Mybutton";
 
 function ItemDetail({ product }) {
   return (
@@ -11,7 +12,7 @@ function ItemDetail({ product }) {
         <p>{product.description}</p>
         <h4 className="priceTag">$ {product.price}</h4>
       </div>
-      {/* <ItemCount stock={product.stock}/> */}
+      <Mybutton stock={product.stock} title="Agregar al Carrito" color="green" />
     </div>
   );
 }

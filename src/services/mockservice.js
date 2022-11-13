@@ -1,16 +1,17 @@
 /* -------------- BACK-END -------------- */
 import products from "../data/data";
 
-function getItems(idCategory) {
+function getItems(category) {
+
   return new Promise((resolve) => {
-    if (idCategory === undefined) {
+    if (category === undefined) {
       setTimeout(() => {
         resolve(products);
       }, 2000);
 
     } else {
       setTimeout(() => {
-        let ItemsRequested = products.filter((item) => item.category === idCategory);
+        let ItemsRequested = products.filter((item) => item.category === category);
         resolve(ItemsRequested);
       }, 2000);
     }

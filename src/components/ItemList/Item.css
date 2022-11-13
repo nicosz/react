@@ -25,6 +25,7 @@
 .card-detail {
   color: #333333;
   padding: 12px 8px;
+  list-style: none;
 }
 
 .card:hover .card-favicon {

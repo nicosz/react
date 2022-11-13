@@ -3,7 +3,14 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Cartwidget from '../cart/Cartwidget';
 import { Link } from 'react-router-dom';
+import { categories } from '../../data/data';
+import { NavDropdown } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+
 function HeaderNav({ title }) {
+  let i = 0
   return (
     <div>
       <Navbar bg="light" expand="lg">
@@ -15,9 +22,14 @@ function HeaderNav({ title }) {
               className="me-auto my-2 my-lg-0"
               style={{ maxHeight: '100px' }}
               navbarScroll>
-              <Link className='mx-2' to="/">home</Link>
-              <Link className='mx-2' to="/">remeras</Link>
-              <Link className='mx-2' to="/">pantalones</Link>
+              <NavDropdown 
+                id="nav-dropdown-dark-example"
+                title="Dropdown"
+              >
+                {categories.map((category) => (
+                  <NavDropdown.Item  as={Link} key={i++}  to={`/category/${category.toLowerCase()}`}>{category}</NavDropdown.Item>
+                ))}
+              </NavDropdown>
             </Nav>
             <Cartwidget />
           </Navbar.Collapse>

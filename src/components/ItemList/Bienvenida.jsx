@@ -1,5 +1,5 @@
 import "./Bienvenida.css"
-export const bienvenida = ({greeting}) => {
+ const bienvenida = ({greeting}) => {
     return (
         <div>
             <div className=" d-flex justify-content-center">

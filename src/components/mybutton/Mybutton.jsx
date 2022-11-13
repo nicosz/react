@@ -1,5 +1,6 @@
 import "./Mybutton.css"
 import { useState } from 'react';
+import { Button } from "react-bootstrap";
 
 function Mybutton({ title, color, stock }) {
 
@@ -19,12 +20,12 @@ function Mybutton({ title, color, stock }) {
   }
 
   return (
-    <>
+    <div className="d-flex text-center">
       <button onClick={handleResta} style={styleButton} className="button"> - </button>
+      <input value={count}/>
       <button onClick={handleSuma} style={styleButton} className="button"> + </button>
-      <p>{title}</p>
-      <p>{count}</p>
-    </>
+      <Button variant="primary">{title}</Button>
+    </div>
   )
 }
 

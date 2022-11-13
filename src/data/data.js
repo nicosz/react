@@ -1,10 +1,11 @@
+
 const products = [
   {
     id: 1,
     title: "Remera",
     price: 649,
     stock: 54,
-    category: "remera",
+    category: "remeras",
     image: "https://http2.mlstatic.com/D_NQ_NP_831858-MLA48044614602_102021-O.webp",
     description: "An apple mobile which is nothing like apple",
   },
@@ -13,7 +14,7 @@ const products = [
     title: "Pantalon",
     price: 899,
     stock: 34,
-    category: "pantalon",
+    category: "pantalones",
     image: "https://http2.mlstatic.com/D_NQ_NP_770674-MLA49029549687_022022-W.webp",
     description: "An apple mobile which is nothing like apple",
   },
@@ -40,7 +41,7 @@ const products = [
     title: "Buso",
     price: 1749,
     stock: 83,
-    category: "buso",
+    category: "busos",
     image: "https://http2.mlstatic.com/D_NQ_NP_951774-MLA32134905937_092019-W.webp",
     description: "An apple mobile which is nothing like apple",
   },
@@ -49,16 +50,16 @@ const products = [
     title: "Pantalon",
     price: 1499,
     stock: 50,
-    category: "Pantalon",
+    category: "zantalones",
     image: "https://http2.mlstatic.com/D_NQ_NP_982965-MLA51249629126_082022-W.webp",
     description: "An apple mobile which is nothing like apple",
   },
   {
     id: 8,
-    title: "Zapatillas",
+    title: "Zapatilla",
     price: 1499,
     stock: 68,
-    category: "Zapatillas",
+    category: "zapatillas",
     image: "https://http2.mlstatic.com/D_NQ_NP_741535-MLA46770506278_072021-W.webp",
     description: "An apple mobile which is nothing like apple",
   },
@@ -67,7 +68,7 @@ const products = [
     title: "Zapatillas",
     price: 1099,
     stock: 96,
-    category: "Zapatillas",
+    category: "zapatillas",
     image: "https://http2.mlstatic.com/D_NQ_NP_729966-MLA48419592927_122021-W.webp",
     description: "An apple mobile which is nothing like apple",
   },
@@ -76,7 +77,7 @@ const products = [
     title: "Campera",
     price: 1099,
     stock: 89,
-    category: "campera",
+    category: "camperas",
     image: "https://http2.mlstatic.com/D_NQ_NP_983830-MLA51120636482_082022-W.webp",
     description: "An apple mobile which is nothing like apple",
   },
@@ -85,7 +86,7 @@ const products = [
     title: "Pantalon",
     price: 13,
     stock: 65,
-    category: "pantalon",
+    category: "pantalones",
     image: "https://http2.mlstatic.com/D_NQ_NP_876958-MLA52093813787_102022-W.webp",
     description: "An apple mobile which is nothing like apple",
   },
@@ -107,5 +108,6 @@ const products = [
     description: "An apple mobile which is nothing like apple",
   }
 ];
+export const categories = ["Remeras","Pantalones","Zapatillas","Busos","Camperas",]
 
 export default products;
