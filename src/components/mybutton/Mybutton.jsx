@@ -1,12 +1,20 @@
 import "./Mybutton.css"
 import { useState } from 'react';
 import { Button } from "react-bootstrap";
+import { CartContext } from "../../context/cartContext";
+import { useContext } from "react";
 
-function Mybutton({ title, color, stock }) {
+
+function Mybutton({ title, color, stock, producto,setIsInCart }) {
+  const { addToCart } = useContext(CartContext)
 
   const styleButton = { backgroundColor: color }
   const [count, setcount] = useState(1)
 
+  function handleBuy(){
+    addToCart(producto, count)
+    setIsInCart(true)
+  }
   function handleSuma() {
     if (count < stock) {
       setcount(count + 1)
@@ -20,11 +28,11 @@ function Mybutton({ title, color, stock }) {
   }
 
   return (
-    <div className="d-flex text-center">
+    <div className="d-flex text-center ">
       <button onClick={handleResta} style={styleButton} className="button"> - </button>
-      <input value={count}/>
+      <input value={count} />
       <button onClick={handleSuma} style={styleButton} className="button"> + </button>
-      <Button variant="primary">{title}</Button>
+      <Button onClick={handleBuy} variant="primary">{title}</Button>
     </div>
   )
 }

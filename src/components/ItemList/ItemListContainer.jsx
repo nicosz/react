@@ -38,11 +38,12 @@ function ItemListContainer() {
                     <div className='d-flex justify-content-center flex-wrap text-center'>
                         {products.map((producto) => (
                             <Item producto={producto} key={producto.id} />
-                            ))}
+                        ))}
                     </div>
                 </div> :
                 <div className="spinner">
-                    <p className="mx-1">Cargando</p> <Spinner  animation="border" />
+                    <p className="mx-1">Cargando</p>
+                    <Spinner animation="border" />
                 </div>
             }
         </div>

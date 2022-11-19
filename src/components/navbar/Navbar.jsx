@@ -24,14 +24,14 @@ function HeaderNav({ title }) {
               navbarScroll>
               <NavDropdown 
                 id="nav-dropdown-dark-example"
-                title="Dropdown"
+                title="Category"
               >
                 {categories.map((category) => (
                   <NavDropdown.Item  as={Link} key={i++}  to={`/category/${category.toLowerCase()}`}>{category}</NavDropdown.Item>
                 ))}
               </NavDropdown>
             </Nav>
-            <Cartwidget />
+            <Cartwidget/>
           </Navbar.Collapse>
         </Container>
       </Navbar>

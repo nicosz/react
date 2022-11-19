@@ -1,19 +1,20 @@
+import Spinner from 'react-bootstrap/Spinner';
+import ItemDetail from "./ItemDetail";
 import { useEffect, useState } from 'react';
 import { getSingleItem } from "../../services/mockService";
-import Spinner from 'react-bootstrap/Spinner';
 import { useParams } from 'react-router-dom';
-import ItemDetail from "./ItemDetail";
 
 
 const ItemDetailContainer = () => {
     const [loaded, setLoaded] = useState(false);
 
     const [producto, setProducto] = useState([])
+    
     const { id } = useParams();
 
 
     async function getItemsAsync() {
-        setLoaded(false)
+    setLoaded(false)
         let respuesta = await getSingleItem(id);
         setProducto(respuesta)
         setLoaded(true)
@@ -35,4 +36,5 @@ const ItemDetailContainer = () => {
         </div>
     )
 }
+
 export default ItemDetailContainer
