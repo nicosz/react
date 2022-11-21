@@ -7,7 +7,6 @@ export function CartContextProvider({ children }) {
 
     const [cart, setCart] = useState([])
 
-
     function addToCart(producto, count) {
         let itemInAlreadyTocart = cart.find(itemIncart => itemIncart.id === producto.id)
 

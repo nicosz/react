@@ -7,6 +7,7 @@ import { useState } from "react";
 
 
 function ItemDetail({ product }) {
+  
   const [isInCart, setIsInCart] = useState(false)
 
   return (
