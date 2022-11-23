@@ -9,7 +9,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "./logo.css"
 
 
-
 function HeaderNav({logo}) {
   let i = 0
   return (

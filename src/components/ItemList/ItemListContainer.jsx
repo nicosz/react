@@ -1,26 +1,29 @@
-
 import Bienvenida from "./Bienvenida";
 import Item from "./Item";
-import getItems from "../../services/mockService";
+//import getItems from "../../services/mockService";
 import Spinner from 'react-bootstrap/Spinner';
+import getItems, { getItemsByCategory } from "../../services/firestore";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./Item.css";
 import "./itemListContainer.css";
 
-
 function ItemListContainer() {
     const [products, setProducts] = useState([]);
 
-    const [loaded, setLoaded] = useState(false);
+    const [loaded, setLoaded] = useState(true);
 
     const { category } = useParams();
 
+
     async function getItemsAsync() {
-        setLoaded(false)
-        let respuesta = await getItems(category);
-        setProducts(respuesta);
-        setLoaded(true)
+        if (!category) {
+            let respuesta = await getItems();
+            setProducts(respuesta);
+        } else {
+            let respuesta = await getItemsByCategory(category);
+            setProducts(respuesta);
+        }
     }
 
     useEffect(() => {

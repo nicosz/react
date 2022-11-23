@@ -14,7 +14,7 @@ function App() {
     <div>
       <CartContextProvider>
         <BrowserRouter>
-          <Navbar  logo={logo}></Navbar>
+          <Navbar logo={logo}></Navbar>
           <Routes>
             <Route path="/lambing" element={<ItemListContainer />} />
             <Route path="/category/:category" element={<ItemListContainer />} />

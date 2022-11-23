@@ -1,20 +1,21 @@
 import Spinner from 'react-bootstrap/Spinner';
 import ItemDetail from "./ItemDetail";
 import { useEffect, useState } from 'react';
-import { getSingleItem } from "../../services/mockService";
+import { getSingleItem } from '../../services/firestore'; 
 import { useParams } from 'react-router-dom';
 
 
 const ItemDetailContainer = () => {
+    const [producto, setProducto] = useState([])
+
     const [loaded, setLoaded] = useState(false);
 
-    const [producto, setProducto] = useState([])
-    
+
     const { id } = useParams();
 
 
     async function getItemsAsync() {
-    setLoaded(false)
+        setLoaded(false)
         let respuesta = await getSingleItem(id);
         setProducto(respuesta)
         setLoaded(true)
