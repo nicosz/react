@@ -1,7 +1,7 @@
 import Bienvenida from "./Bienvenida";
 import Item from "./Item";
-//import getItems from "../../services/mockService";
 import Spinner from 'react-bootstrap/Spinner';
+import { Button } from "react-bootstrap";
 import getItems, { getItemsByCategory } from "../../services/firestore";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -11,7 +11,7 @@ import "./itemListContainer.css";
 function ItemListContainer() {
     const [products, setProducts] = useState([]);
 
-    const [loaded, setLoaded] = useState(true);
+    const [loaded, setLoaded] = useState(false);
 
     const { category } = useParams();
 
@@ -20,9 +20,12 @@ function ItemListContainer() {
         if (!category) {
             let respuesta = await getItems();
             setProducts(respuesta);
+            setLoaded(true)
         } else {
+            setLoaded(false)
             let respuesta = await getItemsByCategory(category);
             setProducts(respuesta);
+            setLoaded(true)
         }
     }
 
@@ -34,7 +37,7 @@ function ItemListContainer() {
         <div>
             {loaded ?
                 <div className="mt-2">
-                    <div className="d-flex justify-content-center">
+                    <div className="text-center">
                         <Bienvenida greeting="bienvenidos a la pagina" />
                     </div>
                     <h1 className="d-flex justify-content-center">mis productos</h1>
@@ -45,8 +48,16 @@ function ItemListContainer() {
                     </div>
                 </div> :
                 <div className="spinner">
-                    <p className="mx-1">Cargando</p>
-                    <Spinner animation="border" />
+                    <Button variant="danger" disabled>
+                        <Spinner
+                            as="span"
+                            animation="grow"
+                            size="sm"
+                            role="status"
+                            aria-hidden="true"
+                        />
+                        Loading...
+                    </Button>
                 </div>
             }
         </div>

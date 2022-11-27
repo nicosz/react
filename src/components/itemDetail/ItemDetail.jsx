@@ -7,7 +7,7 @@ import { useState } from "react";
 
 
 function ItemDetail({ product }) {
-  
+
   const [isInCart, setIsInCart] = useState(false)
 
   return (
@@ -18,14 +18,14 @@ function ItemDetail({ product }) {
       <div className="card-detail_detail">
         <h2>{product.title}</h2>
         <p>{product.description}</p>
-        <h4 className="priceTag">$ {product.price}</h4>
+        <h4 className="priceTag"> ${product.price}</h4>
       </div>
       <div>
         {isInCart ?
           <Link to="/cart" >
-            <Button>Ir al carrito</Button >
+            <Button className="btn-danger">Ir al carrito</Button >
           </Link> :
-          <Mybutton setIsInCart={setIsInCart} producto={product} stock={product.stock} title="Agregar al Carrito" color="green" />
+          <Mybutton setIsInCart={setIsInCart} producto={product} stock={product.stock} title="Agregar al Carrito"  color="#dc3545" />
         }
       </div>
     </div>

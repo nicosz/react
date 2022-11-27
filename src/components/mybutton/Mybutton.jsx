@@ -9,6 +9,7 @@ function Mybutton({ title, color, stock, producto,setIsInCart }) {
   const { addToCart } = useContext(CartContext)
 
   const styleButton = { backgroundColor: color }
+  
   const [count, setcount] = useState(1)
 
   function handleBuy(){
@@ -29,10 +30,10 @@ function Mybutton({ title, color, stock, producto,setIsInCart }) {
 
   return (
     <div className="d-flex text-center ">
-      <button onClick={handleResta} style={styleButton} className="button"> - </button>
+      <button onClick={handleResta} style={styleButton} className="button "> - </button>
       <input value={count} />
       <button onClick={handleSuma} style={styleButton} className="button"> + </button>
-      <Button onClick={handleBuy} variant="primary">{title}</Button>
+      <Button onClick={handleBuy} variant="danger">{title}</Button>
     </div>
   )
 }

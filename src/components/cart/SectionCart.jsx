@@ -3,39 +3,42 @@ import { Link } from 'react-router-dom';
 import { CartContext } from "../../context/cartContext";
 import { useContext } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrashCan } from '@fortawesome/free-solid-svg-icons'
-import { Button } from "react-bootstrap";
+import { faSquareXmark } from '@fortawesome/free-solid-svg-icons'
+import "./imageProducts.css"
 
-export const SectionCart = () => {
-  const { cart, removeItem } = useContext(CartContext)
+export const SectionCart = ({color}) => {
+  const { cart, removeItem, total } = useContext(CartContext)
 
+  const btnRemove = {Color: color }
+  
   return (
     <div>
       {cart.length != 0 ?
-        <Table striped bordered hover variant="dark">
+        <Table className='mt-4' bordered hover variant="light">
           <thead>
             <tr>
-              <th>title</th>
-              <th>price</th>
-              <th>quantity</th>
-              <th>recicly</th>
-              <th></th>
+              <th>Title</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Subtotal</th>
             </tr>
           </thead>
           <tbody>
             {cart.map((producto) => (
-              <tr key={producto.id}>
-                <td>{producto.title}</td>
+              <tr key={producto.id} className="">
+
+                <td>
+                  <FontAwesomeIcon  icon={faSquareXmark}  onClick={() => removeItem(producto.id)} />
+                  <img className='image-products' src={producto.image}></img> {producto.title}
+                </td>
                 <td>{producto.price}</td>
                 <td>{producto.count}</td>
-                <td>
-                  <Button onClick={() => removeItem(producto.id)}>
-                    <FontAwesomeIcon icon={faTrashCan} />
-                  </Button>
-                </td>
-                <td></td>
+                <td>{producto.price * producto.count}</td>
               </tr>
             ))}
+            <tr>
+              <td className='d-flex justify-content-center' colSpan={2}>{total()}</td>
+            </tr>
           </tbody>
         </Table>
         : <Link to="/lambing">

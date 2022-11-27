@@ -1,0 +1,11 @@
+.image-products {
+    width: 80px;
+    border-radius: 2px;
+    height: 80px;
+    object-fit: contain;
+}
+
+td {
+    vertical-align: middle;
+    
+}

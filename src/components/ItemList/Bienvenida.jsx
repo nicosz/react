@@ -2,7 +2,7 @@ import "./Bienvenida.css"
  const bienvenida = ({greeting}) => {
     return (
         <div>
-            <div className=" d-flex justify-content-center">
+            <div>
                 <h1 className="text pb-2">{greeting}</h1>
             </div>
         </div>

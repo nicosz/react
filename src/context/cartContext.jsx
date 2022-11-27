@@ -28,21 +28,28 @@ export function CartContextProvider({ children }) {
 
     function substract(id) {
         let ItemRequested = cart.find(itemIncart => itemIncart.id === id)
-        console.log(ItemRequested)
+
         if (ItemRequested.count > 1) {
             ItemRequested.count--
             setCart([...cart])
         } else {
             removeItem(id)
         }
+
     }
 
     function totalCount() {
-        return cart.reduce((previousValue, currentValue) => previousValue + currentValue.count, 0)
+        return cart.reduce((acc, actual) => acc + actual.count, 0)
+    }
+
+    function total() {
+
+        return cart.reduce((prev, curr) => prev + curr.count * curr.price, 0)
+
     }
 
     return (
-        <CartContext.Provider value={{ addToCart, clear, removeItem, substract, totalCount, cart }}>
+        <CartContext.Provider value={{ addToCart, clear, removeItem, substract, total, totalCount, cart }}>
             {children}
         </CartContext.Provider>
     )
