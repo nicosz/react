@@ -5,11 +5,11 @@ import { useContext } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSquareXmark } from '@fortawesome/free-solid-svg-icons'
 import "./imageProducts.css"
+import "./btnRemove.css"
 
 export const SectionCart = ({color}) => {
   const { cart, removeItem, total } = useContext(CartContext)
 
-  const btnRemove = {Color: color }
   
   return (
     <div>
@@ -28,7 +28,7 @@ export const SectionCart = ({color}) => {
               <tr key={producto.id} className="">
 
                 <td>
-                  <FontAwesomeIcon  icon={faSquareXmark}  onClick={() => removeItem(producto.id)} />
+                  <FontAwesomeIcon className='btn-remove'  icon={faSquareXmark}  onClick={() => removeItem(producto.id)} />
                   <img className='image-products' src={producto.image}></img> {producto.title}
                 </td>
                 <td>{producto.price}</td>
@@ -37,7 +37,7 @@ export const SectionCart = ({color}) => {
               </tr>
             ))}
             <tr>
-              <td className='d-flex justify-content-center' colSpan={2}>{total()}</td>
+              <td className='text-center' colSpan={2}>{total()}</td>
             </tr>
           </tbody>
         </Table>

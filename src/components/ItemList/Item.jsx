@@ -1,7 +1,6 @@
 import "./Item.css";
 import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
-import "./button.css"
 const Item = ({ producto }) => {
   return (
     <div className="card">

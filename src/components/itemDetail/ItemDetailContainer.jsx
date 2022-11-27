@@ -1,7 +1,8 @@
 import Spinner from 'react-bootstrap/Spinner';
 import ItemDetail from "./ItemDetail";
+import { Button } from 'react-bootstrap';
 import { useEffect, useState } from 'react';
-import { getSingleItem } from '../../services/firestore'; 
+import { getSingleItem } from '../../services/firestore';
 import { useParams } from 'react-router-dom';
 
 
@@ -30,8 +31,16 @@ const ItemDetailContainer = () => {
             {loaded ?
                 <ItemDetail product={producto} /> :
                 <div className="spinner">
-                    <p className="mx-1">Cargando</p>
-                    <Spinner animation="border" />
+                    <Button variant="danger" disabled>
+                        <Spinner
+                            as="span"
+                            animation="grow"
+                            size="sm"
+                            role="status"
+                            aria-hidden="true"
+                        />
+                        Loading...
+                    </Button>
                 </div>
             }
         </div>
