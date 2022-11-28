@@ -1,9 +1,10 @@
-import Spinner from 'react-bootstrap/Spinner';
 import ItemDetail from "./ItemDetail";
-import { Button } from 'react-bootstrap';
 import { useEffect, useState } from 'react';
 import { getSingleItem } from '../../services/firestore';
 import { useParams } from 'react-router-dom';
+import { Button } from "react-bootstrap";
+import {Spinner} from "react-bootstrap";
+import 'react-loading-skeleton/dist/skeleton.css'
 
 
 const ItemDetailContainer = () => {
@@ -27,10 +28,13 @@ const ItemDetailContainer = () => {
     }, [id])
 
     return (
+
         <div>
             {loaded ?
                 <ItemDetail product={producto} /> :
                 <div className="spinner">
+                    <p className="mx-1">Cargando</p>
+                    <Spinner animation="border" />
                     <Button variant="danger" disabled>
                         <Spinner
                             as="span"
@@ -46,5 +50,4 @@ const ItemDetailContainer = () => {
         </div>
     )
 }
-
 export default ItemDetailContainer

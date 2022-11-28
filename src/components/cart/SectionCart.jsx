@@ -31,13 +31,13 @@ export const SectionCart = ({color}) => {
                   <FontAwesomeIcon className='btn-remove'  icon={faSquareXmark}  onClick={() => removeItem(producto.id)} />
                   <img className='image-products' src={producto.image}></img> {producto.title}
                 </td>
-                <td>{producto.price}</td>
+                <td>${producto.price}</td>
                 <td>{producto.count}</td>
-                <td>{producto.price * producto.count}</td>
+                <td>${producto.price * producto.count}</td>
               </tr>
             ))}
             <tr>
-              <td className='text-center' colSpan={2}>{total()}</td>
+              <td className='text-center' colSpan={2}>Total: ${total()}</td>
             </tr>
           </tbody>
         </Table>

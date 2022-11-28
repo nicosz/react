@@ -14,7 +14,6 @@
     margin: 40px auto;
     min-height: 600px;
     width: 90%;
-    min-width: 580px;
     max-width: 720px;
     height: 100%;
     border-radius: 4px;
@@ -33,5 +32,4 @@ small {
 
 .card-detail_muted {
     color: #8c8c8e;
-
 }

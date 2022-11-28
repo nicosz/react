@@ -1,5 +1,7 @@
 import { initializeApp } from "firebase/app";
 //import { getAnalytics } from "firebase/analytics";
+
+
 import {
     getFirestore,
     collection,
@@ -11,13 +13,13 @@ import {
 } from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAcPR1GJvMdLGC-ClnHgZhiK0HUclw5AF0",
-    authDomain: "react-9f404.firebaseapp.com",
-    projectId: "react-9f404",
-    storageBucket: "react-9f404.appspot.com",
-    messagingSenderId: "1012848603579",
-    appId: "1:1012848603579:web:aef7fd8017af856c46949e",
-    measurementId: "G-C4PD23MM9E"
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_APP_ID,
+    measurementId: process.env.REACT_APP_MEASUREMENT_ID
 };
 
 const app = initializeApp(firebaseConfig);
@@ -39,7 +41,7 @@ export default async function getItems() {
             id: doc.id,
         };
     });
-    
+
     return documentsData;
 }
 

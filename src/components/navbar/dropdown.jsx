@@ -13,7 +13,7 @@ function SplitVariantExample() {
                         key={variant}
                         id={`dropdown-split-variants-${variant}`}
                         variant={variant.toLowerCase()}
-                        title="category"
+                        title="Category"
                     >
                         {categories.map((category) => (
                             <Dropdown.Item as={Link} key={i++} to={`/category/${category.toLowerCase()}`}>{category}</Dropdown.Item>
