@@ -31,10 +31,8 @@ const ItemDetailContainer = () => {
 
         <div>
             {loaded ?
-                <ItemDetail product={producto} /> :
+                <ItemDetail product={producto} />:
                 <div className="spinner">
-                    <p className="mx-1">Cargando</p>
-                    <Spinner animation="border" />
                     <Button variant="danger" disabled>
                         <Spinner
                             as="span"

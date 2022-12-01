@@ -6,11 +6,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSquareXmark } from '@fortawesome/free-solid-svg-icons'
 import "./imageProducts.css"
 import "./btnRemove.css"
+import { Button } from 'react-bootstrap';
+import "./btnClear.css"
 
-export const SectionCart = ({color}) => {
-  const { cart, removeItem, total } = useContext(CartContext)
+export const SectionCart = () => {
 
-  
+  const { cart, removeItem, total, clear } = useContext(CartContext)
+
   return (
     <div>
       {cart.length != 0 ?
@@ -26,10 +28,9 @@ export const SectionCart = ({color}) => {
           <tbody>
             {cart.map((producto) => (
               <tr key={producto.id} className="">
-
                 <td>
-                  <FontAwesomeIcon className='btn-remove'  icon={faSquareXmark}  onClick={() => removeItem(producto.id)} />
-                  <img className='image-products' src={producto.image}></img> {producto.title}
+                  <FontAwesomeIcon className='btn-remove' icon={faSquareXmark} onClick={() => removeItem(producto.id)} />
+                  <img className='image-products' src={producto.image}></img>{producto.title}
                 </td>
                 <td>${producto.price}</td>
                 <td>{producto.count}</td>
@@ -37,11 +38,16 @@ export const SectionCart = ({color}) => {
               </tr>
             ))}
             <tr>
-              <td className='text-center' colSpan={2}>Total: ${total()}</td>
+              <td className='text-center' colSpan={2}>Total: ${total()}
+                <div className='ms-1'>
+                  <Button variant='danger' onClick={() => clear()}>Vaciar el Carrito</Button> </div>
+              </td>
             </tr>
           </tbody>
-        </Table>
-        : <Link to="/lambing">
+          <div className='btnClear mt-1'>
+          </div>
+        </Table>:
+        <Link to="/lambing">
           <h1 className="d-flex justify-content-center">Volver y agregar algo al carrito</h1>
         </Link>
       }
