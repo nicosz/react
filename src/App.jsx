@@ -19,7 +19,7 @@ function App() {
           <BrowserRouter>
             <Navbar logo={logo}></Navbar>
             <Routes>
-              <Route path="/lambing" element={<ItemListContainer />} />
+              <Route path="/home" element={<ItemListContainer />} />
               <Route path="/category/:category" element={<ItemListContainer />} />
               <Route path="/producto/:id" element={<ItemDetailContainer />} />
               <Route path="/cart" element={<SectionCart />} />
