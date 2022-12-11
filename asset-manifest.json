@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/react/static/css/main.2e5a10b8.css",
-    "main.js": "/react/static/js/main.d4f79259.js",
-    "static/js/787.b978bd17.chunk.js": "/react/static/js/787.b978bd17.chunk.js",
-    "index.html": "/react/index.html",
-    "main.2e5a10b8.css.map": "/react/static/css/main.2e5a10b8.css.map",
-    "main.d4f79259.js.map": "/react/static/js/main.d4f79259.js.map",
-    "787.b978bd17.chunk.js.map": "/react/static/js/787.b978bd17.chunk.js.map"
+    "main.css": "/lambing/static/css/main.3ba3dbf7.css",
+    "main.js": "/lambing/static/js/main.a93b0394.js",
+    "static/js/787.b978bd17.chunk.js": "/lambing/static/js/787.b978bd17.chunk.js",
+    "static/media/logoTienda.png": "/lambing/static/media/logoTienda.01692d5fe4df0ad44411.png",
+    "index.html": "/lambing/index.html",
+    "main.3ba3dbf7.css.map": "/lambing/static/css/main.3ba3dbf7.css.map",
+    "main.a93b0394.js.map": "/lambing/static/js/main.a93b0394.js.map",
+    "787.b978bd17.chunk.js.map": "/lambing/static/js/787.b978bd17.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2e5a10b8.css",
-    "static/js/main.d4f79259.js"
+    "static/css/main.3ba3dbf7.css",
+    "static/js/main.a93b0394.js"
   ]
 }
