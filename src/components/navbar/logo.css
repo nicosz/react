@@ -1,4 +1,17 @@
-.logo-navbar{
-    height:70px;
+.logo-navbar {
+    height: 70px;
     width: 90px;
+}
+
+.img-login {
+    border-radius: 150px;
+    height: 35px;
+}
+
+.logo-sign-In {
+    font-size: 25px;
+}
+
+.sign-out {
+    cursor: pointer;
 }

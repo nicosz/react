@@ -1,5 +1,4 @@
-import Mybutton from "../mybutton/Mybutton";
-import 'react-loading-skeleton/dist/skeleton.css'
+import Mybutton from "../Mybutton/Mybutton";
 import "./itemdetail.css";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";

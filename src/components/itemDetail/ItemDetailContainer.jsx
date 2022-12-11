@@ -1,11 +1,9 @@
 import ItemDetail from "./ItemDetail";
 import { useEffect, useState } from 'react';
-import { getSingleItem } from '../../services/firestore';
+import { getSingleItem } from '../../Services/firestore';
 import { useParams } from 'react-router-dom';
 import { Button } from "react-bootstrap";
 import {Spinner} from "react-bootstrap";
-import 'react-loading-skeleton/dist/skeleton.css'
-
 
 const ItemDetailContainer = () => {
     const [producto, setProducto] = useState([])

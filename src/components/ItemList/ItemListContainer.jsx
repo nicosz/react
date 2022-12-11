@@ -2,7 +2,7 @@ import Bienvenida from "./Bienvenida";
 import Item from "./Item";
 import Spinner from 'react-bootstrap/Spinner';
 import { Button } from "react-bootstrap";
-import getItems, { getItemsByCategory } from "../../services/firestore";
+import getItems, { getItemsByCategory } from "../../Services/firestore";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./Item.css";
@@ -38,9 +38,9 @@ function ItemListContainer() {
             {loaded ?
                 <div className="mt-2">
                     <div className="text-center">
-                        <Bienvenida greeting="bienvenidos a la pagina" />
+                        <Bienvenida greeting="Bienvenidos a la página" />
                     </div>
-                    <h1 className="d-flex justify-content-center">mis productos</h1>
+                    <h1 className="d-flex justify-content-center">Mis productos</h1>
                     <div className='d-flex justify-content-center flex-wrap text-center'>
                         {products.map((producto) => (
                             <Item producto={producto} key={producto.id} />

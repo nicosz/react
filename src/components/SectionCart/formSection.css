@@ -1,0 +1,13 @@
+.formSection {
+    background-color: #f8f9fa;
+}
+
+.formSection:hover {
+    background-color: #f2f5f8;
+
+}
+
+InputGroup{
+    width: 50%;
+    
+}

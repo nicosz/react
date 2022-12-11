@@ -4,18 +4,20 @@ import { CartContext } from "../../context/cartContext";
 import { useContext } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSquareXmark } from '@fortawesome/free-solid-svg-icons'
+import { Button } from 'react-bootstrap';
+
+import Formcheckout from "./Forms"
 import "./imageProducts.css"
 import "./btnRemove.css"
-import { Button } from 'react-bootstrap';
 import "./btnClear.css"
 
 export const SectionCart = () => {
 
-  const { cart, removeItem, total, clear } = useContext(CartContext)
+  const { cart, removeItem, total, clear, } = useContext(CartContext)
 
   return (
     <div>
-      {cart.length != 0 ?
+      {cart.length !== 0 ? 
         <Table className='mt-4' bordered hover variant="light">
           <thead>
             <tr>
@@ -30,7 +32,7 @@ export const SectionCart = () => {
               <tr key={producto.id} className="">
                 <td>
                   <FontAwesomeIcon className='btn-remove' icon={faSquareXmark} onClick={() => removeItem(producto.id)} />
-                  <img className='image-products' src={producto.image}></img>{producto.title}
+                  <img className='image-products' alt='producto' src={producto.image}></img>{producto.title}
                 </td>
                 <td>${producto.price}</td>
                 <td>{producto.count}</td>
@@ -40,17 +42,21 @@ export const SectionCart = () => {
             <tr>
               <td className='text-center' colSpan={2}>Total: ${total()}
                 <div className='ms-1'>
-                  <Button variant='danger' onClick={() => clear()}>Vaciar el Carrito</Button> </div>
+                  <Button variant='danger' onClick={() => clear()}>Vaciar el Carrito</Button>
+                </div>
               </td>
             </tr>
           </tbody>
           <div className='btnClear mt-1'>
           </div>
-        </Table>:
+        </Table> :
         <Link to="/lambing">
           <h1 className="d-flex justify-content-center">Volver y agregar algo al carrito</h1>
         </Link>
       }
+      <div>
+      <Formcheckout />
+      </div>
     </div >
   )
 }

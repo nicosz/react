@@ -1,7 +1,9 @@
 import { initializeApp } from "firebase/app";
 //import { getAnalytics } from "firebase/analytics";
-
-
+import {
+    GoogleAuthProvider,
+    getAuth,
+} from "firebase/auth";
 import {
     getFirestore,
     collection,
@@ -9,7 +11,8 @@ import {
     getDocs,
     getDoc,
     query,
-    where
+    where,
+    addDoc
 } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -19,7 +22,7 @@ const firebaseConfig = {
     storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
     messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
     appId: process.env.REACT_APP_APP_ID,
-    measurementId: process.env.REACT_APP_MEASUREMENT_ID
+
 };
 
 const app = initializeApp(firebaseConfig);
@@ -75,3 +78,13 @@ export async function getItemsByCategory(categoryParams) {
 
     return documentsData;
 }
+
+export async function createOrder(order) {
+    const collectionProducts = collection(DB, "orders")
+    const documentOrder = await addDoc(collectionProducts, order,)
+    return (documentOrder.id)
+}
+
+export const provider = new GoogleAuthProvider();
+
+export const auth = getAuth();
