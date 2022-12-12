@@ -17,10 +17,6 @@ function HeaderNav({ logo }) {
 
   const { SignIn, user, logOut } = useContext(AuthContext)
 
-  setTimeout({
-
-  })
-
   return (
     <div>
       <Navbar bg="light" expand="lg">
