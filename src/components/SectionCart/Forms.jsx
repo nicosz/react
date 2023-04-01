@@ -1,11 +1,10 @@
 /* eslint-disable no-unused-vars */
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { createOrder } from '../../Services/firestore';
+import { createOrder } from '../../services/firestore';
 import { useNavigate } from 'react-router-dom';
 import { useState, useContext } from 'react';
 import { CartContext } from '../../context/cartContext';
-
 
 export default function Formcheckout() {
   const [MessageError, setMessageError] = useState(false)

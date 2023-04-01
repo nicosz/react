@@ -1,8 +1,8 @@
-import Mybutton from "../Mybutton/Mybutton";
-import "./itemdetail.css";
+import Mybutton from "../mybutton/Mybutton";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import "./itemdetail.css";
 
 
 function ItemDetail({ product }) {

@@ -2,7 +2,7 @@ import Bienvenida from "./Bienvenida";
 import Item from "./Item";
 import Spinner from 'react-bootstrap/Spinner';
 import { Button } from "react-bootstrap";
-import getItems, { getItemsByCategory } from "../../Services/firestore";
+import getItems, { getItemsByCategory } from "../../services/firestore";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./Item.css";

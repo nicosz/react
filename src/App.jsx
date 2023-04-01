@@ -1,4 +1,4 @@
-import Navbar from './components/Navbar/Navbar';
+import Navbar from './components/navbar/Navbar.jsx';
 import ItemListContainer from './components/ItemList/ItemListContainer';
 import ItemDetailContainer from './components/itemDetail/ItemDetailContainer';
 import logo from "./Img/logoTienda.png"

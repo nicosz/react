@@ -3,7 +3,7 @@ import {
     signOut,
     signInWithRedirect
 } from "firebase/auth";
-import { auth,provider } from "../Services/firestore"
+import { auth,provider } from "../services/firestore"
 import { useEffect } from "react";
 
 export const AuthContext = createContext();

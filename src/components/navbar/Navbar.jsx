@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Cartwidget from '../Cart/Cartwidget';
+import Cartwidget from '../cart/Cartwidget';
 import SplitVariantExample from './dropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./logo.css"

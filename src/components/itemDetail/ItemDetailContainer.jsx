@@ -1,9 +1,9 @@
 import ItemDetail from "./ItemDetail";
 import { useEffect, useState } from 'react';
-import { getSingleItem } from '../../Services/firestore';
+import { getSingleItem } from "../../services/firestore";
 import { useParams } from 'react-router-dom';
 import { Button } from "react-bootstrap";
-import {Spinner} from "react-bootstrap";
+import { Spinner } from "react-bootstrap";
 
 const ItemDetailContainer = () => {
     const [producto, setProducto] = useState([])
@@ -29,7 +29,7 @@ const ItemDetailContainer = () => {
 
         <div>
             {loaded ?
-                <ItemDetail product={producto} />:
+                <ItemDetail product={producto} /> :
                 <div className="spinner">
                     <Button variant="danger" disabled>
                         <Spinner

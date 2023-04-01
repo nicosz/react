@@ -1,7 +1,7 @@
 import Dropdown from 'react-bootstrap/Dropdown';
 import SplitButton from 'react-bootstrap/SplitButton';
 import { Link } from 'react-router-dom';
-import { categories } from '../../Data/data';
+import { categories } from '../../data/data';
 
 function SplitVariantExample() {
     let i = 0
