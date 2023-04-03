@@ -21,7 +21,7 @@ function HeaderNav({ logo }) {
     <div>
       <Navbar bg="light" expand="lg">
         <Container fluid className='contenedor-nav'>
-          <Navbar.Brand as={Link} to="/home"><img className='logo-navbar' src={logo} alt="logo" /></Navbar.Brand>
+          <Navbar.Brand as={Link} to="/"><img className='logo-navbar' src={logo} alt="logo" /></Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
